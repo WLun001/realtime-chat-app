@@ -45,6 +45,10 @@ export class AppComponent implements OnInit, OnDestroy {
     }
   }
 
+  closeSocket() {
+    this.socket.close();
+  }
+
   public isSystemMessage(message: string) {
     return message.startsWith('/') ? '<strong>' + message.substring(1) + '</strong>' : message;
   }
